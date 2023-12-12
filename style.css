@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+/*
+  Vision
+  */
+
 @font-face {
   font-family: 'Play';
   src: url('/fonts/Play/Play-Regular.ttf') format('truetype');
@@ -15,7 +19,7 @@
 
 body {
   min-height: 100vh;
-  font-family: 'Play',sans-serif;
+  font-family: sans-serif;
 }
 
 header {
@@ -29,6 +33,7 @@ header {
 }
 
 .item {
+  font-family: 'Play',sans-serif;
   text-decoration: none;
   color: white;
   text-align: center;
@@ -56,15 +61,10 @@ header {
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 255, 0.5);
 }
 
-#logo {
-  width: 100px;
-  border-radius: 50%;
-  position: absolute;
-  left: 20px;
-}
+
 
 .title-container {
-  margin: 3rem 3rem 0 3rem;
+  margin: 0 3rem 0 3rem;
   height: 350px;
   position: relative;
   overflow: hidden;

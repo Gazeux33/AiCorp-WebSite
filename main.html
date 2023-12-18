@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
-    <title>AI Corp</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <title>Vision</title>
   </head>
   <body>
     <header>
       <img id="logo" src="assets/lb.png" alt="" />
       <a class="item" href="">Presentation</a>
       <a class="item" href="">Nos projets</a>
-      <a class="item" href="">Nous contacter</a> 
+      <a class="item" href="">Nous contacter</a>
     </header>
 
     <main>
@@ -22,59 +28,107 @@
       <div class="carte-container">
         <article class="carte presentation hover">
           <h1>Presentation</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illum ab, et expedita accusantium at possimus esse soluta quae obcaecati in iusto rerum eius perspiciatis, ea, exercitationem enim ut temporibus molestiae voluptas itaque repellat commodi suscipit pariatur. Maxime, sit ducimus obcaecati, at libero dolore dolorem sed enim nam ratione neque atque earum consequuntur? Neque enim rerum cum dolorem id, repudiandae sed magni a nisi quibusdam tempore, veritatis, obcaecati reiciendis explicabo vitae nostrum quos. </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illum
+            ab, et expedita accusantium at possimus esse soluta quae obcaecati
+            in iusto rerum eius perspiciatis, ea, exercitationem enim ut
+            temporibus molestiae voluptas itaque repellat commodi suscipit
+            pariatur. Maxime, sit ducimus obcaecati, at libero dolore dolorem
+            sed enim nam ratione neque atque earum consequuntur? Neque enim
+            rerum cum dolorem id, repudiandae sed magni a nisi quibusdam
+            tempore, veritatis, obcaecati reiciendis explicabo vitae nostrum
+            quos.
+          </p>
         </article>
         <article class="carte objectifs hover">
           <h1>Objectifs</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, voluptas error? Facere quaerat doloribus veritatis? Aut sequi optio cupiditate similique! Dolorum consequatur officiis reprehenderit labore, sit similique ratione ullam eaque in repellendus explicabo rem sunt nulla, voluptatem totam adipisci. Dignissimos reiciendis porro sint. Libero cum dolorem tenetur aliquam possimus voluptatibus est, modi laboriosam et at, delectus perspiciatis commodi odit minus reiciendis sunt a distinctio natus illum, cupiditate vel soluta.</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum,
+            voluptas error? Facere quaerat doloribus veritatis? Aut sequi optio
+            cupiditate similique! Dolorum consequatur officiis reprehenderit
+            labore, sit similique ratione ullam eaque in repellendus explicabo
+            rem sunt nulla, voluptatem totam adipisci. Dignissimos reiciendis
+            porro sint. Libero cum dolorem tenetur aliquam possimus voluptatibus
+            est, modi laboriosam et at, delectus perspiciatis commodi odit minus
+            reiciendis sunt a distinctio natus illum, cupiditate vel soluta.
+          </p>
         </article>
       </div>
-
 
       <div class="contact-container">
         <h1>Nous contacter</h1>
         <form action="" id="contact-form">
-
           <div class="left-form-container">
             <div class="form first-name">
               <label for="first-name">First Name: </label>
               <input type="text" name="first-name" id="first-name" required />
             </div>
-  
+
             <div class="form family-name">
-              <label for= "family-name" >family Name: </label>
-              <input type="text" name= "family-name" id= "family-name" required />
-            </div>
-  
-            <div class="form mail">
-              <label for= "mail" >Mail: </label>
-              <input type="email" name= "mail" id= "mail" required />
-            </div>
-            
-            <div class="form phone-number">
-              <label for= "phone-number" >Phone Number:</label>
-              <input type="tel" name= "phone-number" id= "phone-number" required />
+              <label for="family-name">family Name: </label>
+              <input type="text" name="family-name" id="family-name" required />
             </div>
 
+            <div class="form mail">
+              <label for="mail">Mail: </label>
+              <input type="email" name="mail" id="mail" required />
+            </div>
+
+            <div class="form phone-number">
+              <label for="phone-number">Phone Number:</label>
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                required
+              />
+            </div>
           </div>
-          
+
           <div class="right-form-container">
             <div class="form content">
-              <label for= "content" >Content:</label>
+              <label for="content">Content:</label>
               <textarea id="story" name="story" rows="10" cols="40"></textarea>
             </div>
 
             <div class="form submit">
-              <input type="submit" value="Envoyer" id="submit-button"/>
+              <input type="submit" value="Envoyer" id="submit-button" />
             </div>
-
-            
           </div>
         </form>
+      </div>
+
+      <div class="position-container">
+        <h1>Nous trouver</h1>
+        <div class="position-container-flex">
+          <div id="map" style="height: 400px; width: 400px"></div>
+          <div class="text-position-container">
+            <h1>15 Rue de Naudet Bât. 2B</h1>
+            <h1>33170 Gradignan</h1>
+          </div>
+          
+          
+        </div>
         
       </div>
 
-      <footer></footer>
+      <footer>
+        <a href="mentions.html">Mentions Légales</a>
+      </footer>
     </main>
+
+    <script>
+    // Initialiser la carte
+    var map = L.map('map').setView([44.79139, -0.61167], 13); // Utiliser les coordonnées converties
+
+    // Ajouter la couche OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Ajouter un marqueur sans popup
+    var marker = L.marker([44.79139, -0.61167]).addTo(map);
+    </script>
   </body>
 </html>

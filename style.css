@@ -7,8 +7,8 @@
 }
 
 @font-face {
-  font-family: 'Play';
-  src: url('/fonts/Play/Play-Regular.ttf') format('truetype');
+  font-family: "Play";
+  src: url("/fonts/Play/Play-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,6 +16,7 @@
 body {
   min-height: 100vh;
   font-family: sans-serif;
+  background-color: aliceblue;
 }
 
 header {
@@ -31,17 +32,17 @@ header {
 .hover {
   transition: transform 0.5s ease-in-out;
 }
-.hover:hover{
-  transform: scale(1.01) ;
+.hover:hover {
+  transform: scale(1.01);
 }
 
 .item {
-  font-family: 'Play',sans-serif;
+  font-family: "Play", sans-serif;
   text-decoration: none;
   color: white;
   text-align: center;
-  font-size: 17px;
-  padding:  16px 60px;
+  font-size: 23px;
+  padding: 16px 60px;
   margin: 20px;
   border: 3px solid white;
   border-radius: 20px;
@@ -50,7 +51,7 @@ header {
   transition: box-shadow 0.2s ease;
 }
 
-.item:hover{
+.item:hover {
   color: white;
   border: none;
   margin: 23px;
@@ -59,8 +60,8 @@ header {
     rgb(0, 0, 14) 0%,
     rgb(57, 57, 159) 31%,
     rgb(31, 49, 203) 73%
-  ); 
-  transform: scale(1.05) ;
+  );
+  transform: scale(1.05);
   box-shadow: 0px 0px 30px 10px rgba(0, 0, 255, 0.5);
 }
 
@@ -115,7 +116,7 @@ header {
   color: aliceblue;
   border-radius: 20px;
   font-size: 20px;
-  font-family: 'Play',sans-serif;
+  font-family: "Play", sans-serif;
   width: 50%;
   padding: 30px;
   background-color: black;
@@ -125,7 +126,7 @@ header {
 }
 
 .contact-container {
-  font-family: 'Play',sans-serif;
+  font-family: "Play", sans-serif;
   color: aliceblue;
   padding: 40px;
   margin: 20px 0;
@@ -134,14 +135,13 @@ header {
 
 .contact-container h1 {
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 #contact-form {
   display: flex;
   justify-content: center;
-
 }
-
 
 .form input {
   background-color: black;
@@ -156,7 +156,7 @@ header {
 }
 
 .form input:focus {
-  border: none;
+  outline: none;
 }
 
 .form textarea {
@@ -171,9 +171,8 @@ header {
 }
 
 .form textarea:focus {
-  border: none;
+  outline: none;
 }
-
 
 .form label {
   margin-top: 10px;
@@ -192,27 +191,57 @@ header {
   min-width: 600px;
 }
 
-
 #submit-button {
   background-color: aliceblue;
   color: black;
 }
 
-#submit-button:hover{
+#submit-button:hover {
   background-color: rgb(213, 219, 224);
+}
+
+.position-container {
+  background-color: aliceblue;
+  color: black;
+  padding: 40px;
+  font-family: "Play",sans-serif;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.position-container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-position-container{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+#map {
+  border: 2px solid black;
 }
 
 footer {
   background-color: black;
-  height: 100px;
+  color: aliceblue;
+  padding: 40px;
+  font-family: "Play",sans-serif;
+}
+
+footer a{
+  font-size: 40px;
+  color: aliceblue;
 }
 
 
+.mentions-container{
+  display: flex;
+}
 
 
-
-
-
-
-
-
+.mentions-container ul{
+  margin: 10px;
+}

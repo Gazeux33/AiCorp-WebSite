@@ -295,8 +295,16 @@ footer a{
 
   }
 
+  .carte-container {
+    flex-wrap: wrap;
+  }
+
   .title-container{
     height: auto;
     margin: 30px 10px;
+  }
+
+  .carte {
+    font-size: 14px;
   }
 }

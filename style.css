@@ -193,6 +193,7 @@ header {
 
 .right-form-container {
   min-width: 600px;
+  margin-right: 40px;
 }
 
 #submit-button {

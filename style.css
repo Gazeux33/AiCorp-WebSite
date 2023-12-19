@@ -144,6 +144,7 @@ header {
 #contact-form {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .form input {
@@ -247,4 +248,55 @@ footer a{
 
 .mentions-container ul{
   margin: 10px;
+}
+
+
+
+@media only screen and (max-width : 1200px) {
+        header a {
+          display: none;
+        }
+  }
+
+
+  @media only screen and (max-width : 800px) {
+    .main-title{
+      font-size: 4rem;
+    }
+
+    .second-title {
+      margin-left: 0;
+    }
+
+    .form input {
+      width: 50%;
+    }
+
+    .form textarea {
+      width: 70%;
+    }
+
+    .carte {
+      font-size: 20px;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+  header {
+    justify-content: center;
+  }
+
+  .main-title{
+    font-size: 2.5rem;
+  }
+
+  #homme {
+    display: none;
+
+  }
+
+  .title-container{
+    height: auto;
+    margin: 30px 10px;
+  }
 }

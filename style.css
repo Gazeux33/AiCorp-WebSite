@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 ::before,
 ::after {
@@ -114,7 +118,7 @@ header {
 .carte {
   color: aliceblue;
   border-radius: 20px;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Play", sans-serif;
   width: 50%;
   padding: 30px;

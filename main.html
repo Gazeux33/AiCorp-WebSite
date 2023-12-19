@@ -14,13 +14,13 @@
   <body>
     <header>
       <img id="logo" src="assets/lb.png" alt="" />
-      <a class="item" href="">Presentation</a>
-      <a class="item" href="">Nos projets</a>
-      <a class="item" href="">Nous contacter</a>
+      <a class="item" href="#presentation">Presentation</a>
+      <a class="item" href="#contact">Nous contacter</a>
+      <a class="item" href="#carte">Nous trouver </a>
     </header>
 
     <main>
-      <div class="title-container">
+      <div class="title-container" id="presentation">
         <h1 class="main-title">Une solution ia</h1>
         <h1 class="main-title second-title">dans votre domaine</h1>
         <img id="homme" src="assets/homme.png" alt="" />
@@ -29,33 +29,18 @@
         <article class="carte presentation hover">
           <h1>Presentation</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illum
-            ab, et expedita accusantium at possimus esse soluta quae obcaecati
-            in iusto rerum eius perspiciatis, ea, exercitationem enim ut
-            temporibus molestiae voluptas itaque repellat commodi suscipit
-            pariatur. Maxime, sit ducimus obcaecati, at libero dolore dolorem
-            sed enim nam ratione neque atque earum consequuntur? Neque enim
-            rerum cum dolorem id, repudiandae sed magni a nisi quibusdam
-            tempore, veritatis, obcaecati reiciendis explicabo vitae nostrum
-            quos.
+            Vison Intelligence Artificielle est une entreprise innovante spécialisée dans le développement de solutions d'intelligence artificielle pour les entreprises. Notre mission est de fournir des outils IA avancés et personnalisés qui aident nos clients à optimiser leurs opérations et à stimuler leur croissance. Avec une équipe d'experts passionnés, nous combinons expertise technique et approche centrée sur l'utilisateur pour créer des solutions qui sont à la fois puissantes et faciles à utiliser.
           </p>
         </article>
         <article class="carte objectifs hover">
           <h1>Objectifs</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum,
-            voluptas error? Facere quaerat doloribus veritatis? Aut sequi optio
-            cupiditate similique! Dolorum consequatur officiis reprehenderit
-            labore, sit similique ratione ullam eaque in repellendus explicabo
-            rem sunt nulla, voluptatem totam adipisci. Dignissimos reiciendis
-            porro sint. Libero cum dolorem tenetur aliquam possimus voluptatibus
-            est, modi laboriosam et at, delectus perspiciatis commodi odit minus
-            reiciendis sunt a distinctio natus illum, cupiditate vel soluta.
+            Notre objectif chez Vison Intelligence Artificielle est de rendre l'IA accessible et bénéfique pour toutes les entreprises, quelle que soit leur taille ou leur secteur d'activité. Nous nous engageons à développer des technologies qui respectent l'éthique, la sécurité et la confidentialité, tout en poussant les frontières de l'innovation. Notre vision est de créer un avenir où l'IA est un partenaire essentiel dans le succès et la durabilité des entreprises.
           </p>
         </article>
       </div>
 
-      <div class="contact-container">
+      <div class="contact-container" id="contact">
         <h1>Nous contacter</h1>
         <form action="" id="contact-form">
           <div class="left-form-container">
@@ -98,7 +83,7 @@
         </form>
       </div>
 
-      <div class="position-container">
+      <div class="position-container" id="carte">
         <h1>Nous trouver</h1>
         <div class="position-container-flex">
           <div id="map" style="height: 400px; width: 400px"></div>
@@ -118,17 +103,12 @@
     </main>
 
     <script>
-    // Initialiser la carte
-    var map = L.map('map').setView([44.79139, -0.61167], 13); // Utiliser les coordonnées converties
-
-    // Ajouter la couche OpenStreetMap
+    var map = L.map('map').setView([44.79139, -0.61167], 13); 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: '© OpenStreetMap contributors'
     }).addTo(map);
-
-    // Ajouter un marqueur sans popup
     var marker = L.marker([44.79139, -0.61167]).addTo(map);
+
     </script>
   </body>
 </html>

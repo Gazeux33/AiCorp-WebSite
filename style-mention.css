@@ -66,4 +66,6 @@ main h2 {
 footer{
     height: 100px;
     background-color: black;
+    position: absolute;
+    bottom: 0;
 }
